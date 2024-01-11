@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { Loader, Marker } from '@googlemaps/js-api-loader'; 
+import { Loader } from '@googlemaps/js-api-loader'; 
 
-const Map = ({ center = { lat:27.67988, lng: 85.27544 }, zoom = 11 }) => {
+const Map = ({ center = { lat: 27.67988, lng: 85.27544 }, zoom = 11 }) => {
   const mapRef = useRef();
 
   useEffect(() => {
@@ -17,9 +17,24 @@ const Map = ({ center = { lat:27.67988, lng: 85.27544 }, zoom = 11 }) => {
       });
 
       const marker = new google.maps.Marker({
-        position: center, 
-        title: 'Joshinani Heritage homes', 
-       
+        position: center,
+        title: 'Joshinani Heritage homes',
+        map: map,
+      });
+
+      const infowindow = new google.maps.InfoWindow({
+        content: `
+          <div>
+            <strong>Joshinani Heritage homes</strong><br />
+            <a href="https://www.google.com/maps/dir/?api=1&destination=${center.lat},${center.lng}" target="_blank">
+              Get Directions
+            </a>
+          </div>
+        `,
+      });
+
+      marker.addListener('click', () => {
+        infowindow.open(map, marker);
       });
     });
   }, []);
