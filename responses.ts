@@ -1,0 +1,1 @@
+export const contactResponses: { fullName: string; email: string; message: string }[] = [];
