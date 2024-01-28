@@ -5,22 +5,28 @@ import WSPGallery from '../components/WSPGallery';
 export default function App({ Component, pageProps }: AppProps) {
   const galleryImages = [
     {
-      img: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      img: "/images/food1.png" 
     },
     {
-      img: 'https://images.pexels.com/photos/3861458/pexels-photo-3861458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      img: "/images/food2.png" 
     },
     {
-      img: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      img: "/images/food3.png" 
     },
     {
-      img: 'https://images.pexels.com/photos/1194713/pexels-photo-1194713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      img: "/images/food4.png" 
     },
     {
-      img: 'https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      img: "/images/food5.png" 
     },
     {
-      img: 'https://images.pexels.com/photos/1712/sunglasses-apple-iphone-desk.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+      img: "/images/food6.png" 
+    },
+    {
+      img: "/images/food7.png" 
+    },
+    {
+      img: "/images/food8.png" 
     }
   ];
 
